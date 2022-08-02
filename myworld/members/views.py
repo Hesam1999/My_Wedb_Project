@@ -52,7 +52,7 @@ def testing(request):
   }
   
   return HttpResponse(template.render(context, request))    
-"""
+
 def testing(request):
   mymembers = Members.objects.all().values()
   template = loader.get_template('template.html')
@@ -60,6 +60,18 @@ def testing(request):
     'mymembers': mymembers,
   }
   return HttpResponse(template.render(context, request))
-  
 
-
+def testing(request):
+  template = loader.get_template('template.html')
+  context = {
+    'greeting' : 1,
+  }
+  return HttpResponse(template.render(context,request))
+"""
+def testing(request):
+  mymembers = Members.objects.all().values()
+  template = loader.get_template('template.html')
+  context = {
+    'mymembers' : mymembers,
+  }
+  return HttpResponse(template.render(context,request))
