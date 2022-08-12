@@ -2,12 +2,14 @@
 <html>
     <body>
             
-        {% for x in fruits %}
-            <h1>{{ x }}</h1>
+        {% for x in cars %}
+            <h1>{{ x.brand }}</h1>
+            <p>{{ x.model }}</p>
+            <p>{{ x.year }}</p>
         {% endfor %}
             
 
-        <p>The x variable is created in views.py, and both var1 and var2 points to x.</p>
+        <p>In views.py you can see what the cars variable looks like.</p>
 
     </body>
 </html>
