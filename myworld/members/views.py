@@ -115,6 +115,7 @@ def testing(request):
   }
   return HttpResponse(template.render(context,request))
 """
+"""
 # Part 12 Training 
 # step 1
 def testing(request):
@@ -123,3 +124,4 @@ def testing(request):
     'fruits': ['Apple', 'Banana', 'Cherry'],     
   }
   return HttpResponse(template.render(context, request))
+"""
