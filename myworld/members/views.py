@@ -125,6 +125,7 @@ def testing(request):
   }
   return HttpResponse(template.render(context, request))
 """
+"""
 # Part 12 Training
 # Step 2
 def testing(request):
@@ -146,5 +147,15 @@ def testing(request):
         'model': 'P1800',
         'year': '1964',
       }]
+  }
+  return HttpResponse(template.render(context, request))
+  """
+# Part 12 Training 
+# Step 3
+def testing(request):
+  mymembers = Members.objects.all().values()
+  template = loader.get_template('template.html')
+  context = {
+    'members': mymembers,
   }
   return HttpResponse(template.render(context, request))
