@@ -1,4 +1,5 @@
 from multiprocessing import context
+from re import template
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
@@ -105,7 +106,7 @@ def testing(request):
 """
 Part 11 Traning step 15 and step 16 and step 17 and step 18
 Work with conditions
-"""
+
 def testing(request):
   template = loader.get_template('template.html')
   context = {
@@ -113,4 +114,12 @@ def testing(request):
     'y': ['Apple', 'Banana', 'Cherry'],
   }
   return HttpResponse(template.render(context,request))
-  
+"""
+# Part 12 Training 
+# step 1
+def testing(request):
+  template = loader.get_template('template.html')
+  context = {
+    'fruits': ['Apple', 'Banana', 'Cherry'],     
+  }
+  return HttpResponse(template.render(context, request))
