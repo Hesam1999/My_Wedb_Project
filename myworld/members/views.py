@@ -151,7 +151,7 @@ def testing(request):
   return HttpResponse(template.render(context, request))
   """
 # Part 12 Training 
-# Step 3
+# Step 3 and Step 4
 def testing(request):
   mymembers = Members.objects.all().values()
   template = loader.get_template('template.html')
