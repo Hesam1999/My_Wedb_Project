@@ -181,7 +181,7 @@ def testing(request):
 # Part 12 Training
 # Step 7
 def testing(request):
-  templte = loader.get_template('template.html')
+  template = loader.get_template('template.html')
   context = {
       'fruits': ['Apple', 'Banana', 'Cherry', 'Oranges', 'Kiwi'],
   }

@@ -2,14 +2,12 @@
 <html>
     <body>
         <ul>
-            `{% for x in myobject %}
-                <li>{{ x.firstname }}</li>
-                {% empty %}
-                    <li>No members</li>
+            `{% for x in fruits %}
+                <li>{{ forloop.counter }}</li>
             {% endfor %}
         </ul>
 
-        <p>In views.py you can see that there is no myobject variable.</p>
+        <p>In views.py you can see what the fruits object looks like.</p>
 
     </body>
 </html>
