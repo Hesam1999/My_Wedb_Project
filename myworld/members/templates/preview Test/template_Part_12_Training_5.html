@@ -2,14 +2,14 @@
 <html>
     <body>
         <ul>
-            `{% for x in myobject %}
+            `{% for x in empytestobject %}
                 <li>{{ x.firstname }}</li>
                 {% empty %}
                     <li>No members</li>
             {% endfor %}
         </ul>
 
-        <p>In views.py you can see that there is no myobject variable.</p>
+        <p>In views.py you can see the emptytestobject.</p>
 
     </body>
 </html>
