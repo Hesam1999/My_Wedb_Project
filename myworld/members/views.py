@@ -168,12 +168,21 @@ def testing(request):
     'empytestobject': [],
   }
   return HttpResponse(template.render(context, request))
-  """
+  
 # Part 12 Training
 # Step 6
 def testing(request):
   template = loader.get_template('template.html')
   context = {
     'fruits': ['Apple', 'Banana', 'Cherry'],
+  }
+  return HttpResponse(template.render(context, request))
+  """
+# Part 12 Training
+# Step 7
+def testing(request):
+  templte = loader.get_template('template.html')
+  context = {
+      'fruits': ['Apple', 'Banana', 'Cherry', 'Oranges', 'Kiwi'],
   }
   return HttpResponse(template.render(context, request))
