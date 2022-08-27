@@ -188,7 +188,7 @@ def testing(request):
   return HttpResponse(template.render(context, request))
 """
 #Part 13 Training
-# Step 1
+# Step 1, 2
 def testing(request):
   template = loader.get_template('template.html')
   return HttpResponse(template.render())
