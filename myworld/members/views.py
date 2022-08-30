@@ -186,7 +186,7 @@ def testing(request):
       'fruits': ['Apple', 'Banana', 'Cherry', 'Oranges', 'Kiwi'],
   }
   return HttpResponse(template.render(context, request))
-"""
+
 #Part 13 Training
 # Step 1, 2, 3, 4, 5
 def testing(request):
@@ -195,3 +195,13 @@ def testing(request):
   #  'var1': 'John',
   #}
   return HttpResponse(template.render())
+"""
+# Part 14 Training
+# Step 1
+def testing(request):
+    mymembers = Members.objects.all().values()
+    template = loader.get_template('template.html')
+    context = {
+        'members' : mymembers,
+    }
+    return HttpResponse(template.render(context, request))
