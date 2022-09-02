@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mymaster1</title>
+    <title>mymaster2</title>
 </head>
 <body>
-	<h1>Welcome</h1>
+	{% block myheading %}
+	{% endblock %}
 
 	{% block mymessage %}
 	{% endblock %}
 
-	<p>Check out the two templates to see what they look like, and views.py to see the reference to the child template.</p>
+	<p>Check out the two templates to see what they look like,
+	and views.py to see the reference to the child template
+	and to see how the members variable looks like.</p>
+
 </body>
 </html>

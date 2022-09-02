@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning_15_2</title>
+    <title>mymaster2</title>
 </head>
 <body>
-	{% extends 'mymaster2.html'%}
-
 	{% block myheading %}
-		<h1>Members</h1>
 	{% endblock %}
 
 	{% block mymessage %}
-		<ul>
-			{% for x in members %}
-				<li>{{ x.firstname }}</li>
-			{% endfor %}
-		</ul>
 	{% endblock %}
+
+	<p>Check out the two templates to see what they look like,
+	and views.py to see the reference to the child template
+	and to see how the members variable looks like.</p>
+
 </body>
 </html>

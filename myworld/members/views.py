@@ -205,9 +205,19 @@ def testing(request):
         'members' : mymembers,
     }
     return HttpResponse(template.render(context, request))
-"""
+
 #Part 15 Training
 #Step 1
 def testing(request):
     template = loader.get_template('template.html')
     return HttpResponse(template.render())
+"""
+#Part 15 Trainng
+#Step 2
+def testing(request):
+    mymembers = Members.objects.all().values()
+    template = loader.get_template('template.html')
+    context = {
+        'members': mymembers,
+    }
+    return HttpResponse(template.render(context, request))
