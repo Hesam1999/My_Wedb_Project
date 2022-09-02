@@ -195,7 +195,7 @@ def testing(request):
   #  'var1': 'John',
   #}
   return HttpResponse(template.render())
-"""
+
 # Part 14 Training
 # Step 1, 2, 3, 4
 def testing(request):
@@ -205,3 +205,9 @@ def testing(request):
         'members' : mymembers,
     }
     return HttpResponse(template.render(context, request))
+"""
+#Part 15 Training
+#Step 1
+def testing(request):
+    template = loader.get_template('template.html')
+    return HttpResponse(template.render())
