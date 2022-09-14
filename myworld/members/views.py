@@ -221,9 +221,18 @@ def testing(request):
         'members': mymembers,
     }
     return HttpResponse(template.render(context, request))
-"""
+
 #Part 16 Training
 #Step 1, 2  
 def testing(request):
     template = loader.get_template('template.html')
     return HttpResponse(template.render())
+"""
+#Part 17 Training
+#Step 1
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'firstname': 'Emil',
+    }
+    return HttpResponse(template.render(context, request))
