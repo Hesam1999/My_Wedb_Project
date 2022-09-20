@@ -102,8 +102,6 @@ def testing(request):
   }
   return HttpResponse(template.render(context,request))
 
-"""
-"""
 Part 11 Traning step 15 and step 16 and step 17 and step 18
 Work with conditions
 
@@ -114,8 +112,7 @@ def testing(request):
     'y': ['Apple', 'Banana', 'Cherry'],
   }
   return HttpResponse(template.render(context,request))
-"""
-"""
+
 # Part 12 Training 
 # step 1
 def testing(request):
@@ -124,8 +121,7 @@ def testing(request):
     'fruits': ['Apple', 'Banana', 'Cherry'],     
   }
   return HttpResponse(template.render(context, request))
-"""
-"""
+
 # Part 12 Training
 # Step 2
 def testing(request):
@@ -236,9 +232,19 @@ def testing(request):
         'firstname': 'Emil',
     }
     return HttpResponse(template.render(context, request))
-"""
+
 #Part 17 Training 
 #Step 3, 4
 def testing(request):
     template = loader.get_template('template.html')
     return HttpResponse(template.render())
+"""
+#Part 18 Training 
+#Step 1
+def testing(request):
+    mydata = Members.objects.all()
+    template = loader.get_template('template.html')
+    context = {
+                'mymembers' : mydata,
+            }
+    return HttpResponse(template.render(context, request))
