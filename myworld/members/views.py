@@ -238,7 +238,7 @@ def testing(request):
 def testing(request):
     template = loader.get_template('template.html')
     return HttpResponse(template.render())
-"""
+
 #Part 18 Training 
 #Step 1
 def testing(request):
@@ -248,3 +248,16 @@ def testing(request):
                 'mymembers' : mydata,
             }
     return HttpResponse(template.render(context, request))
+"""
+# Part 18 Training 
+#Step 2
+def testing(request):
+    mydata = Members.objects.all().values()
+    template = loader.get_template('template.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
+
+# Check out template.html to see how the mymembers object
+# was used in the HTML code.     
