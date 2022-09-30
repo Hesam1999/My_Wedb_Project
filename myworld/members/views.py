@@ -288,7 +288,7 @@ def testing(request):
 
 # Check out template.html to see how the mymembers object
 # was used in the HTML code.
-"""
+
 
 # Part 19 Training
 # Step 1
@@ -302,4 +302,18 @@ def testing(request):
     return HttpResponse(template.render(context, request))
 
 # Check out template.html to see how the mymembers object
-# was used in the HTML code.     
+# was used in the HTML code.   
+"""
+# Part 19 Training
+# Step 2
+
+def testing(request):
+    mydata = Members.objects.filter(lastname='Refsnes', id=2).values()
+    template = loader.get_template('template.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
+
+# Check out template.html to see how the mymembers object
+# was used in the HTML code.
