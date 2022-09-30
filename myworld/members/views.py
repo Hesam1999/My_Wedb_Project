@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import Members
+from django.db.models import Q
 
 def index(request):
   mymembers = Members.objects.all().values()
@@ -317,13 +318,28 @@ def testing(request):
 
 # Check out template.html to see how the mymembers object
 # was used in the HTML code.
-"""
+
 
 # Part 19 Training
 # Step 3
 # Or
 def testing(request):
     mydata = Members.objects.filter(firstname='Emil').values() | Members.objects.filter(firstname='Tobias').values()
+    template = loader.get_template('template.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
+
+# Check out template.html to see how the mymembers object
+# was used in the HTML code.
+"""
+
+# Part 19 Training
+# Step 4
+# Or use models
+def testing(request):
+    mydata = Members.objects.filter(Q(firstname='Emil') | Q(firstname='Tobias')).values()
     template = loader.get_template('template.html')
     context = {
         'mymembers': mydata,
