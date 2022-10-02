@@ -378,13 +378,28 @@ def testing(request):
 
 # Check out template.html to see how the mymembers object
 # was used in the HTML code.
-"""
+
 
 # Part 20 Training
 # Step 2
 
 def testing(request):
     mydata = Members.objects.all().order_by('-firstname').values()
+    template = loader.get_template('template.html')
+    context = {
+        'mymembers':mydata,
+    }
+    return HttpResponse(template.render(context, request))
+
+# Check out template.html to see how the mymembers object
+# was used in the HTML code.
+"""
+
+# Part 20 Training
+# Step 3
+
+def testing(request):
+    mydata = Members.objects.all().order_by('lastname', '-id').values()
     template = loader.get_template('template.html')
     context = {
         'mymembers':mydata,
