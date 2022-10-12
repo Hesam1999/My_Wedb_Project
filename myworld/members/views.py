@@ -393,7 +393,7 @@ def testing(request):
 
 # Check out template.html to see how the mymembers object
 # was used in the HTML code.
-"""
+
 
 # Part 20 Training
 # Step 3
@@ -408,4 +408,16 @@ def testing(request):
 
 # Check out template.html to see how the mymembers object
 # was used in the HTML code.
+"""
 
+# Part 21 Training 
+# Step 1.1
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'heading': 'Hello &lt;i&gt;my&lt;/i&gt; World!',
+        'heading2': 'Hello <i>my</i> World!',
+    }
+    print(context)
+    return HttpResponse(template.render(context, request))
