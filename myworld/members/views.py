@@ -411,7 +411,7 @@ def testing(request):
 """
 
 # Part 21 Training 
-# Step 1.1
+# Step 1.1, 1.2
 
 def testing(request):
     template = loader.get_template('template.html')
@@ -421,3 +421,4 @@ def testing(request):
     }
     print(context)
     return HttpResponse(template.render(context, request))
+
