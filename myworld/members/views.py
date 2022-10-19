@@ -421,11 +421,19 @@ def testing(request):
     }
     print(context)
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training 
 # Step 2.1, 2.2
 
 def testing(request):
     template = loader.get_template('childtemplate.html')
+    return HttpResponse(template.render())
+"""
+
+# Part 21 Training
+# Step 3.1
+
+def testing(request):
+    template = loader.get_template('template.html')
     return HttpResponse(template.render())
