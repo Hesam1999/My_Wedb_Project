@@ -464,7 +464,7 @@ def testing(request):
 def testing(request):
     template = loader.get_template('template.html')
     return HttpResponse(template.render())
-"""
+
 
 # Part 21 Training
 # Step 7.1
@@ -477,3 +477,16 @@ def testing(request):
         'z': 'BMW',
     } 
     return HttpResponse(template.render(context, request))
+"""
+# Part 21 Training
+# Step 7.2
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'x': '',
+        'y': 'Ford',
+        'z': 'BMW',
+    } 
+    return HttpResponse(template.render(context, request))
+
