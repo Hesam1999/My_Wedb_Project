@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning_21_8_1</title>
+    <title>Learning_21_8_2</title>
 </head>
 <body>
 
-	<ul>
-		{% for x in fruits %}
-			<li>{{ x }}</li>
-		{% endfor %}
-	</ul>
+	
+	{% for x, y in mycar.items %}
+	<p>The {{ x }} is  {{ y }}.</p>
+	{% endfor %}
 
-	<p>Check out view.py to see wht the fruits variable look like.</p>
+	<p>Check out view.py to see what the mycar dictionary look like.</p>
 </body>
 </html>

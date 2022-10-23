@@ -489,7 +489,7 @@ def testing(request):
         'z': 'BMW',
     } 
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training
 # Step 8.1
@@ -500,3 +500,18 @@ def testing(request):
         'fruits': ['Apple', 'Banana', 'Cherry', 'Orange']
     }
     return HttpResponse(template.render(context, request))
+"""
+# Part 21 Training
+# Step 8.2
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'mycar': {
+        'brand': 'Ford',
+        'model': 'Mustang',
+        'year': '1964',
+        }
+    }
+    return HttpResponse(template.render(context, request))
+
