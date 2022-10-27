@@ -538,7 +538,7 @@ def testing(request):
 """
 
 # Part 21 Training
-# Step 8.5
+# Step 8.5, 8.6
 
 def testing(request):
     template = loader.get_template('template.html')
