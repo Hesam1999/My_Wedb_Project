@@ -581,7 +581,7 @@ def testing(request):
     return HttpResponse(template.render(context, request))
 """
 # Part 21 Training
-# Step 9.4, 9.5, 9.6, 9.7, 9.8
+# Step 9.4, 9.5, 9.6, 9.7, 9.8, 9.9
 
 def testing(request):
     template = loader.get_template('template.html')
