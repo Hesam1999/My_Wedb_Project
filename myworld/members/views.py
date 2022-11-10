@@ -579,7 +579,7 @@ def testing(request):
         'myvar': 2
     }
     return HttpResponse(template.render(context, request))
-"""
+
 # Part 21 Training
 # Step 9.4, 9.5, 9.6, 9.7, 9.8, 9.9, 9.10, 9.11
 
@@ -589,5 +589,18 @@ def testing(request):
         'myvar': 5
     }
     return HttpResponse(template.render(context, request))
+"""
+
+# Part 21 Training
+# Step 9.12
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'fruits': ['Apple', 'Banana', 'Cherry', 'Orange']
+    }
+    return HttpResponse(template.render(context, request))
+
+
 
 
