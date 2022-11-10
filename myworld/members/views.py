@@ -589,7 +589,7 @@ def testing(request):
         'myvar': 5
     }
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training
 # Step 9.12
@@ -601,6 +601,19 @@ def testing(request):
     }
     return HttpResponse(template.render(context, request))
 
+"""
+
+
+# Part 21 Training
+# Step 9.13
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'var1' : 5,
+        'var2' : 5,
+    }
+    return HttpResponse(template.render(context, request))
 
 
 
