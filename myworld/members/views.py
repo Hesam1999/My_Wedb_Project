@@ -685,7 +685,7 @@ def testing(request):
             }]
     }
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training
 # Step 10.3
@@ -696,6 +696,13 @@ def testing(request):
         'mylist': [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5]
     }
     return HttpResponse(template.render(context, request))
+"""
 
+# Part 21 Training
+# Step 11.1
+
+def testing(request):
+    template = loader.get_template('template.html')
+    return HttpResponse(template.render())
 
 
