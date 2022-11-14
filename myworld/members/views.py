@@ -650,7 +650,7 @@ def testing(request):
         'mylist': [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5]
     }
     return HttpResponse(template.render(context, request))
-"""
+
 # Part 21 Training
 # Step 10.2
 
@@ -683,6 +683,17 @@ def testing(request):
                 'model': 'P1800',
                 'year': '1964',
             }]
+    }
+    return HttpResponse(template.render(context, request))
+"""
+
+# Part 21 Training
+# Step 10.3
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'mylist': [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5]
     }
     return HttpResponse(template.render(context, request))
 
