@@ -699,7 +699,7 @@ def testing(request):
 """
 
 # Part 21 Training
-# Step 11.1, 11.2, 12.1, 12.2
+# Step 11.1, 11.2, 12.1, 12.2, 13.1
 
 def testing(request):
     template = loader.get_template('template.html')
