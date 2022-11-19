@@ -696,7 +696,7 @@ def testing(request):
         'mylist': [1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5]
     }
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training
 # Step 11.1, 11.2, 12.1, 12.2, 13.1, 13.2
@@ -704,5 +704,40 @@ def testing(request):
 def testing(request):
     template = loader.get_template('template.html')
     return HttpResponse(template.render())
+"""
 
+# Part 21 Training
+# Step 14.1
+
+def testing(request):
+    template = loader.get_template('template.html')
+    context = {
+        'cars': [
+            {
+                'brand': 'Ford',
+                'model': 'Mustang',
+                'year': '1964',
+            },
+            {
+                'brand': 'Ford',
+                'model': 'Branco',
+                'year': '1970',
+            },
+            {
+                'brand': 'Ford',
+                'model': 'Sierra',
+                'year': '1981',
+            },
+            {
+                'brand': 'Volvo',
+                'model': 'XC90',
+                'year': '2016',
+            },
+            {
+                'brand': 'Volvo',
+                'model': 'P1800',
+                'year': '1964',
+            }]
+    }
+    return HttpResponse(template.render(context, request))
 
