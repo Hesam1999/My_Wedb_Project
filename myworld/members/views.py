@@ -751,7 +751,7 @@ def testing(request):
         'fruits': ['Apple', 'Banana', 'Cherery', 'Orange']
         }
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training
 # Step 16.1
@@ -762,3 +762,11 @@ def testing(request):
         'fruits': ['Apple', 'Banana', 'Cherry', 'Orange']
     }
     return HttpResponse(template.render(context, request))
+"""
+
+# Part 21 Training
+# Step 17.1
+
+def testing(request):
+    template = loader.get_template('template.html')
+    return HttpResponse(template.render())
