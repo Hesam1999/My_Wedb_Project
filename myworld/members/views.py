@@ -740,7 +740,7 @@ def testing(request):
             }]
     }
     return HttpResponse(template.render(context, request))
-"""
+
 
 # Part 21 Training
 # Step 15.1, 15.2
@@ -750,4 +750,15 @@ def testing(request):
     context = {
         'fruits': ['Apple', 'Banana', 'Cherery', 'Orange']
         }
+    return HttpResponse(template.render(context, request))
+"""
+
+# Part 21 Training
+# Step 16.1
+
+def testing(request):
+    temlate = loader.get_template('template.html')
+    context = {
+        'fruits': ['Apple', 'Banana', 'Cherry', 'Orange']
+    }
     return HttpResponse(template.render(context, request))
